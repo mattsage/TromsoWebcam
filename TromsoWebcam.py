@@ -17,7 +17,7 @@ while count < 48: #48 due to photo every 30 mins e.g. 30*48/60 = 24 hours
 	urllib.urlretrieve("http://www.amihotel.no/webcamera/broadcast.jpg", "file3.jpg")
 	
   #convert names to Date Stamp
-	os.rename("file.jpg", time.strftime("Uni_%Y%m%d%H%M.jpg"))
+	os.rename("file.jpg", time.strftime("uni_%Y%m%d%H%M.jpg"))
 	os.rename("file2.jpg", time.strftime("sky_%Y%m%d%H%M.jpg"))
 	os.rename("file3.jpg", time.strftime("amihotel_%Y%m%d%H%M.jpg"))
 
