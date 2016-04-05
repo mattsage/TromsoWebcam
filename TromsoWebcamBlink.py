@@ -2,6 +2,7 @@ import urllib
 import time
 import datetime
 import os
+import subprocess
 #from pushbullet.pushbullet import PushBullet
 
 #apiKey = "apikey"
@@ -26,6 +27,8 @@ while count < 1: #48 due to photo every 30 mins e.g. 30*48/60 = 24 hours
 	time.sleep( 10 ) #sleep for 1800 seconds (30 mins)
 
 else:
-  # p.pushNote(devices[0]["iden"], 'Pi Timelapse Complete', 'Shutting Down')
-  # os.system("sudo shutdown -h now")
-    os.system("sudo /home/pi/blink1/commandline/blink1-tool --on --glimmer=10")
+  #p.pushNote(devices[0]["iden"], 'Pi Timelapse Complete', 'Shutting Down')
+  #os.system("sudo shutdown -h now")
+  #os.system("sudo /home/pi/blink1/commandline/blink1-tool --on --glimmer=10")
+  #os.system("sudo ./home/pi/Scripts/github/AuroraTracker/Blink1/AuroraBlink1.sh")
+  subprocess.call("/home/pi/Scripts/github/AuroraTracker/Blink1/AuroraBlink1.sh", shell=True)
