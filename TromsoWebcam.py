@@ -30,4 +30,5 @@ else:
 	os.system("convert -delay 10 -loop 0 sky_*.jpg sky_%Y%m%d.gif")
 	os.system("convert -delay 10 -loop 0 amihotel_*.jpg amihotel_%Y%m%d.gif")
 	# p.pushNote(devices[0]["iden"], 'Pi Timelapse Complete', 'Shutting Down')
-   	os.system("sudo shutdown -h now")
+   	#os.system("sudo shutdown -h now")
+	print ("Time Lapse Complete")
