@@ -22,7 +22,7 @@ while count < 48: #48 due to photo every 30 mins e.g. 30*48/60 = 24 hours
 	os.rename("file3.jpg", time.strftime("amihotel_%Y%m%d%H%M.jpg"))
 
 	count = count + 1 #Increase count
-
+	print ("%d photos taken") % count
 	time.sleep( 1800 ) #sleep for 1800 seconds (30 mins)
 
 else:
