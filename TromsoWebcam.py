@@ -26,5 +26,8 @@ while count < 48: #48 due to photo every 30 mins e.g. 30*48/60 = 24 hours
 	time.sleep( 1800 ) #sleep for 1800 seconds (30 mins)
 
 else:
-  # p.pushNote(devices[0]["iden"], 'Pi Timelapse Complete', 'Shutting Down')
-   os.system("sudo shutdown -h now")
+	os.system("convert -delay 10 -loop 0 uni_*.jpg uni_%Y%m%d.gif")
+	os.system("convert -delay 10 -loop 0 sky_*.jpg sky_%Y%m%d.gif")
+	os.system("convert -delay 10 -loop 0 amihotel_*.jpg amihotel_%Y%m%d.gif")
+	# p.pushNote(devices[0]["iden"], 'Pi Timelapse Complete', 'Shutting Down')
+   	os.system("sudo shutdown -h now")
